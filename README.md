@@ -1,6 +1,6 @@
 # banking-customer-aggregation-service
 
-**Interview-ready backend aggregation service** inspired by real enterprise banking systems.
+**Backend aggregation service** inspired by real enterprise banking systems.
 
 This project demonstrates how customer-related data is aggregated from **multiple distributed systems**
 under **latency, timeout, and partial-failure conditions** — a common challenge in large-scale financial institutions.
@@ -63,8 +63,6 @@ GET /customers/{customerId}/profile
 
 ---
 
-## Design decisions (what interviewers care about)
-
 - **WebClient + reactive types** for parallel calls
 - Explicit **timeouts per dependency**
 - Error isolation instead of cascading failures
@@ -96,7 +94,3 @@ docker run -p 8080:8080 customer-aggregation:0.1
 
 ---
 
-## How to use in interviews
-- Walk through **one failure scenario**
-- Explain timeout + fallback behavior
-- Discuss how this would scale with more downstream systems
