@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: banking-customer-aggregation-service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+
+app:
+  timeouts:
+    coreBankingMs: 800
+    marketingMs: 800
+    campaignStatsMs: 800
+  simulate:
+    # Demo knobs to simulate latency/failure without external deps
+    coreBankingDelayMs: 120
+    marketingDelayMs: 250
+    campaignStatsDelayMs: 900
+    coreBankingFail: false
+    marketingFail: false
+    campaignStatsFail: false
